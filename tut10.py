@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Function to total orders and apply any applicable discount
+Function to calculate multiple order totals and apply any applicable discount
 """
 # Stock prices
 price = {'book': 10.0, 'magazine': 5.5, 'newspaper': 2.0}
@@ -38,3 +38,9 @@ def calculate_price(price, order):
         return discounted_price
     else:
         return gross_total
+
+# Verify calculations are correct
+assert(95 == calculate_price(price, order1))
+assert(26.5 == calculate_price(price, order2))
+assert(114.75 == calculate_price(price, order3))
+print("Done")
